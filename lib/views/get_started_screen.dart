@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:recipe_app_ui/utils/constants/colors.dart';
 import 'package:recipe_app_ui/utils/constants/image_strings.dart';
+import 'package:recipe_app_ui/views/onboarding_screen.dart';
 
 class GetStartedScreen extends StatelessWidget {
   const GetStartedScreen({super.key});
@@ -17,7 +19,7 @@ class GetStartedScreen extends StatelessWidget {
           ),
           // Dark overlay for better text visibility
           Container(
-            color: Colors.black.withOpacity(0.6),
+            color: Colors.black.withOpacity(0.7),
           ),
           // Content of the screen
           Column(
@@ -25,15 +27,24 @@ class GetStartedScreen extends StatelessWidget {
             children: [
               const Spacer(),
               // Large text
-              const Padding(
-                padding: EdgeInsets.symmetric(horizontal: 24.0),
+               Padding(
+                padding: const EdgeInsets.only(right: 48.0),
                 child: Text(
                   'Explore,\nCook,\nShare.',
-                  textAlign: TextAlign.center,
+                  textAlign: TextAlign.start,
                   style: TextStyle(
-                    fontSize: 48,
+                    fontSize: 70,
+                    height: 1.2,
                     color: UColors.textWhiteColor,
                     fontWeight: FontWeight.bold,
+                    shadows: [
+                      Shadow(
+                        offset: const Offset(0, 4), // Shadow below the text
+                        blurRadius: 10.0,     // Soft blur
+                        color: Colors.black.withOpacity(0.5), // Shadow color
+                      ),
+                    ],
+                    letterSpacing: 3.0
                   ),
                 ),
               ),
@@ -56,7 +67,7 @@ class GetStartedScreen extends StatelessWidget {
                       width: double.infinity,
                       child: ElevatedButton(
                         onPressed: () {
-                          // Navigate to another screen on Get Started
+                          Get.to(() => const OnboardingScreen());
                         },
                         style: ElevatedButton.styleFrom(
                           backgroundColor: UColors.primaryColor, // Button color
