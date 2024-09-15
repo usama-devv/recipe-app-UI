@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:recipe_app_ui/utils/constants/colors.dart';
 import 'package:recipe_app_ui/utils/constants/image_strings.dart';
-import 'package:recipe_app_ui/views/onboarding_screen.dart';
+import 'package:recipe_app_ui/views/onboarding/onboarding_screen.dart';
 
 class GetStartedScreen extends StatelessWidget {
   const GetStartedScreen({super.key});
