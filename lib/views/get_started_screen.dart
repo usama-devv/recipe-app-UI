@@ -70,7 +70,7 @@ class GetStartedScreen extends StatelessWidget {
                           Get.to(() => const OnboardingScreen());
                         },
                         style: ElevatedButton.styleFrom(
-                          backgroundColor: UColors.primaryColor, // Button color
+                          backgroundColor: UColors.primaryColor,
                           shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(50),
                           ),
