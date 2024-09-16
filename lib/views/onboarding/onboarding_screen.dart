@@ -8,6 +8,7 @@ class OnboardingScreen extends StatelessWidget {
     return const Scaffold(
       body: Text(
         "What's Inside?",
+        
       ),
     );
   }
